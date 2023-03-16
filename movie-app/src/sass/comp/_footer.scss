@@ -1,0 +1,13 @@
+.footer{
+    background-color: $ultra-violet;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    .text{
+        text-align: center;
+    }
+}

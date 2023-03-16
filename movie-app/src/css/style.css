@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 16px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: system-ui;
+  background-color: #413F54;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  margin: 0% 40px;
+}
+
+.header {
+  background-color: #5F5AA2;
+  height: 72px;
+  padding: 8px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header a {
+  text-decoration: none;
+}
+.header .logo {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
+}
+.header .user-image {
+  cursor: pointer;
+}
+.header .user-image img {
+  width: 38px;
+  height: 38px;
+}
+
+.footer {
+  background-color: #5F5AA2;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+.footer .text {
+  text-align: center;
+}
+
+.movie-wrapper .movie-list {
+  margin: 20pc 0pc;
+}
+.movie-wrapper .movie-list h2 {
+  color: whitesmoke;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 15px;
+}
+
+.card-item {
+  background-color: #30292F;
+  cursor: pointer;
+}
+.card-item .card-top {
+  height: 400px;
+}
+.card-item .card-top img {
+  width: 100%;
+  height: 100%;
+}
+.card-item .card-bottom {
+  height: auto;
+}
+.card-item .card-bottom .card-info {
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem 0;
+}
+.card-item .card-bottom .card-info h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
