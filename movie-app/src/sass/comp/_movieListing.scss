@@ -1,8 +1,28 @@
 .movie-wrapper {
     .movie-list {
-        margin: 20pc 0pc;
+        margin: 20px 0pc;
         h2 {
+            font-size: 20px;
+            margin: 2rem 0;
             color: whitesmoke;
+            background-color: $primary-color;
+            width: 10%;
+            border-radius: 2px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+    }
+    .shows-list {
+        margin: 20px 0pc;
+        h2 {
+            font-size: 20px;
+            margin: 2rem 0;
+            color: whitesmoke;
+            background-color: $primary-color;
+            width: 10%;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
     }
 }

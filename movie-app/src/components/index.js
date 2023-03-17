@@ -5,3 +5,4 @@ export { default as MoveDetail } from './MoveDetail';
 export { default as MoveListing } from './MoveListing';
 export { default as MovieCard } from './MovieCard';
 export { default as PageNotFound } from './PageNotFound';
+export { default as Loading } from './Loading';
