@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux"
 import { getAllMovies, getAllShows } from "../features/movies/movieSLice"
-import MovieCard from "./MovieCard";
+import { MovieCard, PageNotFound } from "./index";
+import Slider from 'react-slick';
+import { Settings } from "../common/settings";
 
 const MoveListing = () => {
-
   const movies = useSelector(getAllMovies);
   const shows = useSelector(getAllShows);
 
@@ -13,7 +14,7 @@ const MoveListing = () => {
     ))
   ) : (
     <div className="movies-error">
-      <h3>Empty</h3>
+       Not Found
     </div>
   )
 
@@ -23,7 +24,7 @@ const MoveListing = () => {
     ))
   ) : (
     <div className="movies-error">
-      <h3>Empty</h3>
+      Not Found
     </div>
   )
 
@@ -32,14 +33,14 @@ const MoveListing = () => {
       <div className="movie-list">
         <h2>Movies</h2>
         <div className="movie-container">
-          {renderMovies}
+          <Slider {...Settings}>{renderMovies}</Slider>
         </div>
       </div>
 
       <div className="shows-list">
         <h2>Shows</h2>
         <div className="movie-container">
-          {renderShows}
+          <Slider {...Settings}>{renderShows}</Slider>
         </div>
       </div>
     </div>

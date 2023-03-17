@@ -109,13 +109,14 @@ h6 {
   align-items: center;
   justify-content: space-between;
 }
-.header a {
-  text-decoration: none;
-}
 .header .logo {
   color: whitesmoke;
   font-size: 20px;
   font-weight: 600;
+}
+.header .logo a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 .header .user-image {
   cursor: pointer;
@@ -123,6 +124,32 @@ h6 {
 .header .user-image img {
   width: 38px;
   height: 38px;
+}
+.header .search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.header .search-bar form {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+.header .search-bar input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0.5rem;
+  font-size: 18px;
+  width: 100%;
+  font-weight: 500;
+  outline: none;
+}
+.header .search-bar button {
+  padding: 0px 1rem;
+  font-size: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
 }
 
 .footer {
@@ -148,7 +175,6 @@ h6 {
   margin: 2rem 0;
   color: whitesmoke;
   background-color: #355691;
-  width: 10%;
   border-radius: 2px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -161,24 +187,22 @@ h6 {
   margin: 2rem 0;
   color: whitesmoke;
   background-color: #355691;
-  width: 10%;
   text-align: center;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.movie-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-gap: 15px;
 }
 
 .card-item {
   background-color: #30292F;
   cursor: pointer;
   border-radius: 10px;
+  height: 100%;
+  margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.3s;
+}
+.card-item a {
+  text-decoration: none;
 }
 .card-item:hover {
   transform: scale(1.1);
@@ -192,7 +216,7 @@ h6 {
   height: 100%;
 }
 .card-item .card-bottom {
-  height: auto;
+  min-height: 150px;
 }
 .card-item .card-bottom .card-info {
   color: whitesmoke;
@@ -261,9 +285,11 @@ h6 {
 }
 .movie-section .section-right {
   width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
 }
 .movie-section .section-right .gradient {
+  border-radius: 10px;
   position: absolute;
   background-color: #355691;
   width: 100%;
@@ -272,18 +298,20 @@ h6 {
 }
 .movie-section .section-right img {
   width: 100%;
+  border-radius: 10px;
   height: 100%;
   object-fit: cover;
 }
 
 .box {
-  width: 200px;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  background-color: #413F54;
 }
 
 .box .b {
@@ -335,5 +363,82 @@ h6 {
   }
   100% {
     transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  animation: colorSlide 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+.flex-container .text-center {
+  text-align: center;
+}
+.flex-container .text-center h1,
+.flex-container .text-center h3 {
+  margin: 10px;
+  cursor: default;
+}
+.flex-container .text-center h1 .fade-in,
+.flex-container .text-center h3 .fade-in {
+  animation: fadeIn 2s ease infinite;
+}
+.flex-container .text-center h1 {
+  font-size: 8em;
+  transition: font-size 200ms ease-in-out;
+  border-bottom: 1px dashed white;
+}
+.flex-container .text-center h1 span#digit1 {
+  animation-delay: 200ms;
+}
+.flex-container .text-center h1 span#digit2 {
+  animation-delay: 300ms;
+}
+.flex-container .text-center h1 span#digit3 {
+  animation-delay: 400ms;
+}
+.flex-container .text-center button {
+  border: 1px solid white;
+  background: transparent;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 200ms ease-in;
+  margin: 20px 0;
+}
+.flex-container .text-center button:hover {
+  background-color: white;
+  color: #555;
+  cursor: pointer;
+}
+
+@keyframes colorSlide {
+  0% {
+    background-color: #152a68;
+  }
+  25% {
+    background-color: royalblue;
+  }
+  50% {
+    background-color: seagreen;
+  }
+  75% {
+    background-color: tomato;
+  }
+  100% {
+    background-color: #152a68;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

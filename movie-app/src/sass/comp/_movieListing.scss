@@ -6,7 +6,6 @@
             margin: 2rem 0;
             color: whitesmoke;
             background-color: $primary-color;
-            width: 10%;
             border-radius: 2px;
             text-align: center;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -19,15 +18,14 @@
             margin: 2rem 0;
             color: whitesmoke;
             background-color: $primary-color;
-            width: 10%;
             text-align: center;
             border-radius: 2px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
     }
 }
-.movie-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 15px;
-}
+// .movie-container {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+//     grid-gap: 15px;
+// }
